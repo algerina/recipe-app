@@ -8,6 +8,14 @@ class FoodsController < ApplicationController
   end
 
   def create
+    @food = current_user.foods.new(food_params)
+
+    if @food.save
+      flash[:success] = 'Food has been added successfully'
+      redirect_to foods_path
+    else
+      render :new
+    end
   end
 
   def destroy
