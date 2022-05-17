@@ -1,16 +1,18 @@
 <h1>Recipes</h1>
 
-<div class="container border border-4 border-success p-2 border-opacity-10 rounded">
+
 <%@recipes.each do |recipe|%>
+<div class="container border border-4 border-danger p-2 border-opacity-10 rounded mb-3">
   <div class="row">
-    <div class="col order-first">
+    <div class="col-3 text-center">
     <p><%=recipe.name%></p>
     </div>
-    <div class="col order-last">
+    <div class="col-6">
     <p><%=recipe.description%></p>
     </div>
   </div>
+  </div>
 <%end%>
-</div>
+
 
 
