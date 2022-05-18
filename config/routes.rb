@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   resources :foods
   resources :recipes
+  resources :public_recipes, only: %i[index]
   
   # root "foods#index"
 end
