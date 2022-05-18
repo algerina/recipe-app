@@ -10,7 +10,7 @@ recipe2 = Recipe.create(user: new_user, name: "Salad", preparation_time: 13, coo
   description: 'tasty', public: true )
 
 recipe1 = Recipe.create(user_id: 1, name: "Pizza", preparation_time: 13, cooking_time: 10, description: 'tasty', public: true )
-recipe3 = Recipe.create(user_id: 2, name: "Baklawa", preparation_time: 30, cooking_time: 30, description: 'Pistachio and honey', public: true )
+recipe3 = Recipe.create(user_id: 4, name: "Baklawa", preparation_time: 30, cooking_time: 30, description: 'Pistachio and honey', public: true )
 
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)

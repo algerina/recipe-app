@@ -1,12 +1,12 @@
 <h1>Recipes</h1>
 
-
-<%@recipes.each do |recipe|%>
+    <%# <p><%=  button_to "Add Recipe", "/recipes/#{recipe.id}", method: :delete,  data: { confirm: 'Are you sure you want to delete this topic?' }, class: 'btn btn-info' %></p> %>
+<%@current_user.recipes.each do |recipe|%>
 <div class="container border border-4 border-danger p-2 border-opacity-10 rounded mb-3">
   <div class="row">
     <div class="col-3 text-center">
     <p><%=recipe.name%></p>
-    <p><%=  button_to "Delete Recipe", "/recipes/#{recipe.id}", method: :delete,  data: { confirm: 'Are you sure you want to delete this topic?' }, class: 'btn btn-info' %></p>
+    <p><%=  button_to "Delete Recipe", "/recipes/#{recipe.id}", method: :delete,  data: { confirm: 'Do you want to delete recipe?' }, class: 'btn btn-info' %></p>
     </div>
     <div class="col-6">
     <p><%=recipe.description%></p>
