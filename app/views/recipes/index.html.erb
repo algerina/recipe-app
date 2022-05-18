@@ -8,7 +8,8 @@
     <div class="container border border-4 border-danger p-2 border-opacity-10 rounded mb-3">
       <div class="row">
         <div class="col-3 text-center">
-        <p><%=recipe.name%></p>
+        <a href="/recipes/<%= recipe.id %>" class="text-reset text-decoration-none">
+        <%= recipe.name %></a>
         <p><%= button_to "Delete", "recipes/#{recipe.id}" , method: :delete, class: 'btn btn-danger' %></p>
         </div>
         <div class="col-6">

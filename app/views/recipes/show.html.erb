@@ -1,2 +1,10 @@
 <p class="text-center"><%=@recipe.name %></p>
+<p class="text-center"><span>Praparation_time:</span><%=@recipe.preparation_time %></span>
+<p class="text-center"><span>Praparation_time:</span><%=@recipe.preparation_time %></span>
+<p class="text-center"><span>Cooking_time:</span><%=@recipe.cooking_time %></span>
+<p class="text-center"><span>Description:</span><%=@recipe.description %></span>
+
+        <p><%= button_to "Add ingredient", "/recipes/#{:recipe_id}/foods" , class: 'btn btn-danger' %></p>
+
+
 
