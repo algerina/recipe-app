@@ -15,12 +15,21 @@
       </tr>
     </thead>
     <tbody>
-      <% @foods.each do |food| %>
+      
+      <% if @current_user.foods.length > 0 %>
+
+        <% @current_user.foods.each do |food| %>
+          <tr>
+            <td><%= food.name %></td>
+            <td><%= food.measurement_unit  %></td>
+            <td><%= food.price %></td>
+            <td><%= button_to "Delete", "foods/#{food.id}" , method: :delete, class: 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+
+      <% else %>
         <tr>
-          <td><%= food.name %></td>
-          <td><%= food.measurement_unit  %></td>
-          <td><%= food.price %></td>
-          <td><button type="button" class="btn btn-danger">Delete</button></td>
+          <td colspan="4">There Is No Foods</td>
         </tr>
       <% end %>
     </tbody>
