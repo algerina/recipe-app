@@ -4,7 +4,7 @@
 <p class="text-center"><span>Cooking_time:</span><%=@recipe.cooking_time %></span>
 <p class="text-center"><span>Description:</span><%=@recipe.description %></span>
 
-        <p><%= button_to "Add ingredient", "/recipes/#{:recipe_id}/foods" , class: 'btn btn-danger' %></p>
+        <p><%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe), class: 'btn btn-danger' %></p>
 
 
 

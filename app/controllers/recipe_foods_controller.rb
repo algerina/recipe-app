@@ -17,7 +17,7 @@ class RecipeFoodsController < ApplicationController
   def destroy
     @recipe_food = RecipeFood.find(params[:id])
     @recipe_food.destroy
-    redirect_to recipe_path(Recipe.find(params[:recipe_id])
+    redirect_to recipe_path(Recipe.find(params[:recipe_id]))
   end
 
   private
