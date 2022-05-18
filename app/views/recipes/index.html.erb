@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2 class="my-3">Recipes List</h2>
+  <%= link_to 'Add Recipe', new_recipe_path, class: 'btn btn-outline-secondary w-25' %>
+</div>
+
+<%@current_user.recipes.each do |recipe|%>
+  <div class="container border border-4 border-danger p-2 border-opacity-10 rounded mb-3">
+    <div class="row">
+      <div class="col-3 text-center">
+      <p><%=recipe.name%></p>
+      <p><%= button_to "Delete", "recipes/#{recipe.id}" , method: :delete, class: 'btn btn-danger' %></p>
+      </div>
+      <div class="col-6">
+      <p><%=recipe.description%></p>
+      </div>
+    </div>
+  </div>
+<%end%>
+
+
+
