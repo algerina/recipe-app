@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :recipes
-  # get 'recipes/index'
-  # get 'recipes/show'
-  # get 'recipes/create'
-  devise_for :users
   root to: 'recipes#index'
+  devise_for :users 
+  
+  resources :foods
+  resources :recipes
+  
+  root "foods#index"
 end

@@ -1,0 +1,40 @@
+<section>
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="my-3">Foods List</h2>
+    <%= link_to 'Add Food', new_food_path, class: 'btn btn-outline-secondary w-25' %>
+  </div>
+
+  <table class="table table-dark table-striped table-hover text-center">
+    <thead class="border">
+      <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Measurement Unit</th>
+        <th scope="col">Unit Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% if @current_user.foods.length > 0 %>
+
+        <% @current_user.foods.each do |food| %>
+          <tr>
+            <td><%= food.name %></td>
+            <td><%= food.measurement_unit  %></td>
+            <td><%= food.price %></td>
+            <td><%= button_to "Delete", "foods/#{food.id}" , method: :delete, class: 'btn btn-danger' %></td>
+          </tr>
+        <% end %>
+
+      <% else %>
+        <tr>
+          <td colspan="4">There Is No Foods</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</section>
+
+
