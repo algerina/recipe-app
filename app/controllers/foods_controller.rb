@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @foods = Food.all
     @current_user = current_user
@@ -26,7 +26,6 @@ class FoodsController < ApplicationController
     @food.destroy
     redirect_to foods_path
   end
-
 
   private
 
