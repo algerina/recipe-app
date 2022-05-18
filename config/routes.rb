@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  root to: 'recipes#index'
+  root to: 'foods#index'
   devise_for :users 
   
   resources :foods
   resources :recipes
-  
-  # root "foods#index"
+  resources :public_recipes, only: %i[index]
 end

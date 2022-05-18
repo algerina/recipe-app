@@ -15,11 +15,16 @@
   </div>
 
   <div class="mb-3">
-    <%= form.text_field :description, class:"form-control", placeholder:"Enter the description unit" %>
+    <%= form.text_area:description, class:"form-control", placeholder:"Enter the description" %>
   </div>
 
   <div class="mb-3">
     <%= form.number_field :cooking_time, class:"form-control", placeholder:"Enter the cooking time" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.check_box :public, class: 'form-check-input' %>
+    <%= form.label :public, "Public", class: 'form-check-label' %>
   </div>
 
   <div>
