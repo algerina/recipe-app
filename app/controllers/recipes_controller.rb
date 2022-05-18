@@ -8,7 +8,6 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
   end
 
-
   def new
     @recipe = Recipe.new
   end
@@ -24,7 +23,6 @@ class RecipesController < ApplicationController
     end
   end
 
-  
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
