@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.5'
+ruby '3.0.4'
 
 gem 'bootsnap', require: false
 gem 'devise'
@@ -16,15 +16,12 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'ffi'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails'
-
-  # Capybara, the library that allows us to interact with the browser using Ruby
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rails-controller-testing'
   gem 'capybara'
-
-  # The following gems aids with the nuts and bolts
-  # of interacting with the browser.
   gem 'webdrivers'
 end
 
