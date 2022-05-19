@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @recipes = Recipe.all
     @current_user = current_user

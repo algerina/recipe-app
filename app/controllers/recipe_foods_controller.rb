@@ -17,7 +17,7 @@ class RecipeFoodsController < ApplicationController
     if @recipe_food.save
       redirect_to recipe_path(id: params[:recipe_id])
       flash[:success] = 'Ingredient added successfuly'
-    else 
+    else
       redirect_to new_recipe_recipe_food_path
       flash[:alert] = 'Try again'
     end
@@ -34,5 +34,4 @@ class RecipeFoodsController < ApplicationController
   def recipe_food_params
     params.require(:recipe_food).permit(:quantity)
   end
-
 end
