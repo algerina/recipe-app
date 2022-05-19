@@ -1,6 +1,29 @@
 <section>
 
-  <h2>Shopping List</h2>
-  <%= @foods.inspect %>
+  <h2 class="text-center">Shopping List</h2>
+
+  <div class="d-flex justify-content-around my-3">
+    <h4>Amount of food items to buy: <span class="badge bg-danger"><%= @recipe.recipe_foods.length %></span></h4>
+    <h4>Total value of food needed: <span class="badge bg-danger"><%= @total_price %></span></h4>
+  </div>
+
+<table class="table table-dark table-striped table-hover text-center">
+    <thead class="border">
+      <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipe.recipe_foods.each do |r| %>
+          <tr>
+            <th scope="row"><%= r.food.name %></th>
+            <td><%= r.quantity %></td>
+            <td><%= r.food.price * r.quantity %> $</td>
+          </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 </section>
