@@ -1,7 +1,7 @@
 class ShoppingListController < ApplicationController
   before_action :authenticate_user!
 
-    def sum(array)
+  def sum(array)
     sum = 0
     array.each do |number|
       sum += number.quantity * number.food.price
