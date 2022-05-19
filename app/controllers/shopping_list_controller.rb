@@ -8,8 +8,8 @@ class ShoppingListController < ApplicationController
     @total_price = sum(@recipe.recipe_foods.includes([:food]))
   end
 
-  private 
-  
+  private
+
   def sum(array)
     sum = 0
     array.each do |number|
