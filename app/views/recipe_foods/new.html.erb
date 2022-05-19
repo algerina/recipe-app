@@ -2,32 +2,30 @@
   <h2 class="text-center my-3">Add Ingredient</h2>
 
 
-<% @foods.each do |food| %>
-  <%= form_with model: @recipe_food, url: recipe_recipe_foods_path do |f| %>
-  <table class="table table-dark table-striped table-hover text-center">
-    <thead class="border">
-      <tr>
-        <th scope="col">Food</th>
-        <th scope="col">Quantity</th>
-        <th scope="col">Value</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
+  <% @foods.each do |food| %>
+    <%= form_with model: @recipe_food, url: recipe_recipe_foods_path do |f| %>
+      <table class="table table-dark table-striped table-hover text-center">
+        <thead class="border">
+          <tr>
+            <th scope="col">Food</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Value</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
 
-    <tbody>
-      
+        <tbody>
           <tr>
             <%= hidden_field_tag 'food_id', food.id %>
             <td><%= food.name %></td>
             <td><%= food.measurement_unit %></td>
             <td><%= f.number_field :quantity, placeholder: 'Enter the value' %></td>
             <td><%= f.submit 'Add', class: 'btn btn-danger' %></td>
-          </tr>
-        
-    </tbody>
-  </table>
+          </tr>   
+        </tbody>
+      </table>
 
-   <% end %>
+    <% end %>
   <% end %>
 
   <div class="mt-3">
