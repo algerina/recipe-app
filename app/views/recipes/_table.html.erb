@@ -18,6 +18,8 @@
         <td class="d-flex justify-content-around">
           <% if recipe_food.recipe.user == current_user%>
             <%= button_to 'Delete', recipe_recipe_food_path(id: recipe_food.id, recipe_id: recipe_food.recipe_id), method: :delete, class: 'btn btn-danger' %>
+          <% else %>
+              <button class="btn btn-danger" disabled>Delete</button>
           <% end %>
         </td>
       </tr>
