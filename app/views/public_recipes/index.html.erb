@@ -6,7 +6,7 @@
     <div class="border border-2 border-danger p-2 bg-dark text-white p-3 rounded mb-3">
       <div class="row d-flex justify-content-around align-items-center">
         <div class="col-3 text-center">
-          <p class="fw-bold fs-3"><%=recipe.name%></p>
+          <p class="fw-bold fs-3"><%= link_to recipe.name, recipe_path(recipe),method: :get, class:"link-secondary" %></p>
           <p>by <%= recipe.user.name %></p>
         </div>
 
@@ -17,5 +17,6 @@
       </div>
     </div>
   <%end%>
+
 
 </div>

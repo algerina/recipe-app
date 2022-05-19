@@ -1,5 +1,4 @@
 <section>
-
   <h2 class="my-3 text-center"><%=@recipe.name %></h2>
 
   <div class="d-flex justify-content-between mt-5">
@@ -18,7 +17,7 @@
       <% end %>
     </div>
   </div>
-  
+
   <div class="d-flex justify-content-between">
     <%= link_to 'Generate shopping list', recipe_shopping_list_index_path(@recipe), class: 'btn btn-outline-dark mt-5 ' %>
     <% if @recipe.user == @current_user%> 
