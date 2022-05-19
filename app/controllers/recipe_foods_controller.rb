@@ -1,4 +1,6 @@
 class RecipeFoodsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @recipe_food = RecipeFood.new
     @foods = Food.where(user_id: current_user)
@@ -8,14 +10,14 @@ class RecipeFoodsController < ApplicationController
   end
 
   def create
-    recipe_food = RecipeFood.new(recipe_food_params)
-    recipe_food.food_id = params[:food_id]
-    recipe_food.recipe_id = params[:recipe_id]
+    @recipe_food = RecipeFood.new(recipe_food_params)
+    @recipe_food.food_id = params[:food_id]
+    @recipe_food.recipe_id = params[:recipe_id]
 
-    if recipe_food.save
+    if @recipe_food.save
       redirect_to recipe_path(id: params[:recipe_id])
       flash[:success] = 'Ingredient added successfuly'
-    else 
+    else
       redirect_to new_recipe_recipe_food_path
       flash[:alert] = 'Try again'
     end
@@ -32,5 +34,4 @@ class RecipeFoodsController < ApplicationController
   def recipe_food_params
     params.require(:recipe_food).permit(:quantity)
   end
-
 end
