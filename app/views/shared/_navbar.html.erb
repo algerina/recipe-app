@@ -30,7 +30,7 @@
           </li>
 
           <li class="nav-item">
-            <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn btn-outline-danger' %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'nav-link btn btn-outline-danger' %>
           </li>
 
         <% else %>
