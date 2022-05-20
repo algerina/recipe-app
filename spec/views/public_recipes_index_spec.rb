@@ -4,7 +4,8 @@ RSpec.describe 'Public Recipes page', type: :system do
   before do
     User.create(id: 1, name: 'name', email: 'name@name.com', password: 'password')
     Food.create(id: 1, user_id: 1, name: 'orange', measurement_unit: 'gr', price: 2)
-    Recipe.create(id: 10, user_id: 1, name: 'recipe1', preparation_time: 10, cooking_time: 5, description: 'This is the desc of recipe 1', public: true)
+    Recipe.create(id: 10, user_id: 1, name: 'recipe1', preparation_time: 10, cooking_time: 5,
+                  description: 'This is the desc of recipe 1', public: true)
   end
 
   describe 'Visiting the food index page' do

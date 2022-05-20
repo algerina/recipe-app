@@ -10,9 +10,11 @@ RSpec.describe 'Shopping List', type: :system do
 
       User.create(id: 1, name: 'name', email: 'name@name.com', password: 'password')
       User.create(id: 2, name: 'name2', email: 'name2@name.com', password: 'password2')
-      
-      Recipe.create(id: 10, user_id: 1, name: 'recipe1', preparation_time: 10, cooking_time: 5, description: 'This is the desc of recipe 1', public: true)
-      Recipe.create(id: 11, user_id: 11, name: 'recipe2', preparation_time: 20, cooking_time: 15, description: 'This is the desc of recipe 2', public: true)
+
+      Recipe.create(id: 10, user_id: 1, name: 'recipe1', preparation_time: 10, cooking_time: 5,
+                    description: 'This is the desc of recipe 1', public: true)
+      Recipe.create(id: 11, user_id: 11, name: 'recipe2', preparation_time: 20, cooking_time: 15,
+                    description: 'This is the desc of recipe 2', public: true)
 
       Food.create(id: 1, user_id: 1, name: 'food1', measurement_unit: 'kilos', price: 1)
       Food.create(id: 2, user_id: 2, name: 'food2', measurement_unit: 'grams', price: 2)
