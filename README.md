@@ -2,6 +2,8 @@
 
 > The Recipe app keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe
 
+ https://user-images.githubusercontent.com/45231276/169404938-d17d8cba-d292-43c6-8d6f-eb5d92e0f30c.mp4
+
 ## Built With
 
 - Ruby
