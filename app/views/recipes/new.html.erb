@@ -1,0 +1,10 @@
+<section>
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="my-3">Add New Recipe</h2>
+    <%= link_to "Back to Recipes List", recipes_path, class: 'btn btn-outline-secondary' %>
+  </div>
+
+  <%= render "form", recipe: @recipe %>
+  
+</section>

@@ -1,0 +1,38 @@
+<%= form_with model: recipe do |form| %>
+
+  <% if recipe.errors.any? %>
+    <% recipe.errors.full_messages.each do |message| %>
+      <div class="alert alert-danger" role="alert">
+        <%= message %> 
+      </div>
+    <% end %>       
+  <% end %>
+  
+
+ <div class="mb-3">
+    <% form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"Enter the name of recipe" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.text_area:description, class:"form-control", placeholder:"Enter the description" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.number_field :cooking_time, class:"form-control", placeholder:"Enter the cooking time" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.number_field :preparation_time, class:"form-control", placeholder:"Enter preparation time" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.check_box :public, class: 'form-check-input' %>
+    <%= form.label :public, "Public", class: 'form-check-label' %>
+  </div>
+
+  <div>
+      <%= form.submit class:'btn btn-outline-dark w-25' %>
+  </div>
+
+<% end %>
